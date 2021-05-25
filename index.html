@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rare earth facility</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Your styles should be called here -->
+    <style>
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        font-size: 16px;
+        font-family: 'Oxygen', sans-serif;
+      }
+
+
+      figure,
+      img {
+
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .annotate {
+        position: relative;
+      }
+
+      .annotate .dot {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #FFF;
+        color: #FFF;
+      }
+
+      .annotate .dot .inner {
+        position: absolute;
+        opacity: 0;
+        padding: 25px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .annotate .dot .close {
+        position: absolute;
+        color: #FFF;
+        top: 10px;
+        right: 10px;
+        font-size: 2em;
+        text-decoration: none;
+        opacity: 0;
+      }
+
+      .annotate .dot.green {
+        background-color: rgba(0, 110, 65, 0.65);
+      }
+
+      .annotate .dot.purple {
+        background-color: rgba(74, 2, 242, 0.65);
+      }
+
+      .annotate .dot.red {
+        background-color: rgba(230, 11, 65, 0.65);
+      }
+
+      .annotate .dot.blue {
+        background-color: rgba(11, 18, 230, 0.65);
+      }
+
+      .annotate .dot.pink {
+        background-color: rgba(240, 12, 182, 0.65);
+      }
+
+      .annotate .dot.yellow {
+        background-color: yellow;
+      }
+
+      .annotate .dot.active {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        border: 0;
+        z-index: 2;
+      }
+
+      .annotate .dot.active .inner,
+      .annotate .dot.active .close {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      #mine:not(.active) {
+        top: 35%;
+        left: 75%;
+      }
+
+      #process:not(.active) {
+        bottom: 45%;
+        left: 60%;
+      }
+
+      #tailing:not(.active) {
+        top: 35%;
+        left: 20%;
+      }
+
+      #separate:not(.active) {
+        top: 75%;
+        left: 35%;
+      }
+
+      .caption,
+      figcaption {
+        font-size: 0.9rem;
+        color: #8e8a8a;
+        padding: 5px 0;
+      }
+
+      .container {
+        margin: 15px;
+      }
+
+      .container .map {
+        max-width: 1200px;
+        display: block;
+        margin: 10px auto;
+      }
+
+      .container.image .caption,
+      .container.image figcaption {
+        padding: 5px 10px;
+      }
+
+      @media(min-width: 681px) {}
+
+      @media(min-width: 769px) {
+
+        .container {
+          width: 100%;
+          max-width: 800px;
+          display: block;
+          margin: 10px auto;
+        }
+      }
+
+      @media(min-width: 805px) {
+        .container {
+          width: 100%;
+          max-width: 800px;
+          display: block;
+          margin: 10px auto;
+        }
+      }
+
+      @media(min-width: 1205px) {
+
+        .container.image .caption,
+        .container.image figcaption {
+          padding: 5px 0;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 800px;
+          display: block;
+          margin: 10px auto;
+        }
+      }
+    </style>
+  </head>
+
+  <!-- YOUR CONTENT GOES HERE -->
+
+  <body>
+    <div class="container image">
+      <div class="annotate">
+        <h2>White Mesa Mill</h2>
+        <p>Energy Fuels has begun processing rare earths at its industrial facility in Utah. Click the dots to learn more.</p>
+        <img src="images/facility.jpg" />
+        <p class="caption">Image courtesy of Energy Fuels.</p>
+        <div id="mine" class="dot green">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3>Mining</h3>
+            <p>Unlike other rare earth facilities, like that of MP Materials in California, White Mesa Mill does not have an open pit mine.</p>
+          </div>
+        </div>
+        <div id="process" class="dot green">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3>Crack and leach</h3>
+            <p>Energy Fuels is performing an intermediate step in rare earths processing called "crack and leach," which involves removing the uranium and thorium from monazite ore to produce rare earth carbonate.</p>
+          </div>
+        </div>
+        <div id="tailing" class="dot green">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3>Tailings</h3>
+            <p>Waste from the extraction process is deposited in the tailings pond.</p>
+          </div>
+        </div>
+        <div id="separate" class="dot green">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3>Separation</h3>
+            <p>Energy Fuels plans to expand its operations into separation––the next step in the process in which rare earth carbonate is split into individual oxides––in the next two to three years.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your javascript should be called here -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const dots = document.querySelectorAll(".dot");
+
+        dots.forEach(function(dot) {
+          dot.addEventListener("click", function(e) {
+            e.preventDefault();
+            const clicked_dot = e.target.closest(".dot");
+
+            if (clicked_dot.classList.contains("active")) {
+              clicked_dot.classList.remove("active");
+            } else {
+              clicked_dot.classList.add("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+
+</html>
